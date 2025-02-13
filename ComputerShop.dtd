@@ -1,0 +1,44 @@
+<!ELEMENT Computer_Shop (products,customers,sales)>
+<!-- Products-->
+<!ELEMENT products (product+)>
+<!ELEMENT product (title,(manufactured|brand),model,price,stock,reconditioned?)>
+<!ATTLIST product id ID #REQUIRED>
+
+<!ELEMENT title EMPTY>
+<!ELEMENT brand EMPTY> <!-- manufacturer and brand-->
+<!ELEMENT model EMPTY>
+<!ELEMENT manufactured EMPTY>
+
+<!ELEMENT price EMPTY>
+<!ATTLIST price currency (EUR|USD) "">
+<!ATTLIST price price_discount NMTOKEN "0">
+
+<!ELEMENT stock EMPTY>
+<!ATTLIST stock vat (general|reduced|super-reduced) "">
+<!ATTLIST stock ean CDATA #IMPLIED>
+<!ELEMENT reconditioned EMPTY>
+<!-- Customers-->
+<!ELEMENT customers (customer*)>
+<!ELEMENT customer (id_card,((first_name,surnames)|complete_name),telephone_number*,postal_address)>
+<!ATTLIST customer id ID #REQUIRED>
+
+<!ELEMENT id_card EMPTY>
+<!ELEMENT first_name EMPTY>
+<!ELEMENT surnames EMPTY>
+<!ELEMENT telephone_number EMPTY>
+
+<!ELEMENT postal_address EMPTY>
+<!ATTLIST postal_address date_creation CDATA #REQUIRED>
+<!-- Sales-->
+<!ELEMENT sales (sale)>
+<!ELEMENT sale (list_products_sold,total_price,currency)>
+<!ATTLIST sale date CDATA #REQUIRED>
+<!ATTLIST sale customer IDREF #REQUIRED>
+<!ATTLIST sale product_id IDREF #REQUIRED>
+
+<!ELEMENT list_products_sold (item+)>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST list_products_sold Quantity NMTOKEN "1">
+
+<!ELEMENT total_price (#PCDATA)>
+<!ELEMENT currency (#PCDATA)>

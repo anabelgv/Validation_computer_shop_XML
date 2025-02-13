@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Computer_Shop SYSTEM "ComputerShop.dtd">
+<Computer_Shop>
+    <products> 
+        <product id="P1">
+            <title></title>
+            <brand></brand>
+            <model></model>
+            <price currency="EUR" price_discount="0"></price>
+            <stock vat="reduced" ean=""></stock>
+            <reconditioned></reconditioned>
+
+        </product>
+        <product id="P2">
+            <title></title>
+            <brand></brand>
+            <model></model>
+            <price currency="USD" price_discount="0"></price>
+            <stock vat="general" ean=""></stock><!-- reconditioned-->
+
+        </product>
+    </products>
+    <customers>
+        <customer id="C1">
+            <id_card></id_card>
+            <first_name></first_name>
+            <surnames></surnames>
+            <telephone_number></telephone_number>
+            <postal_address date_creation=""></postal_address>
+        </customer>
+    </customers>
+    <sales>
+        <sale date="01/06/2020" customer="C1" product_id="P2">
+            <list_products_sold Quantity="2">
+                <item>orange</item>
+            </list_products_sold>
+            <total_price></total_price>
+            <currency></currency>
+        </sale>
+
+    </sales>
+
+
+</Computer_Shop>

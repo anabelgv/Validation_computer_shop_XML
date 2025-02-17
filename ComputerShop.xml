@@ -3,39 +3,40 @@
 <Computer_Shop>
     <products> 
         <product id="P1">
-            <title></title>
-            <brand></brand>
-            <model></model>
+            <title>monitor</title>
+            <brand>asus</brand>
+            <model>shap</model>
             <price currency="EUR" price_discount="0"></price>
             <stock vat="reduced" ean=""></stock>
             <reconditioned></reconditioned>
 
         </product>
         <product id="P2">
-            <title></title>
-            <brand></brand>
-            <model></model>
+            <title>laptop</title>
+            <brand>apple</brand>
+            <model>mac 6</model>
             <price currency="USD" price_discount="0"></price>
             <stock vat="general" ean=""></stock><!-- reconditioned-->
 
         </product>
     </products>
     <customers>
-        <customer id="C1">
-            <id_card></id_card>
-            <first_name></first_name>
-            <surnames></surnames>
-            <telephone_number></telephone_number>
-            <postal_address date_creation=""></postal_address>
+        <customer id="C1" >
+            <id_card>08574</id_card>
+            <first_name>sara</first_name>
+            <surnames>gomez</surnames>
+            <telephone_number>555 555 555</telephone_number>
+            <postal_address date_creation="03/05/2020">rua sanclemente</postal_address>
         </customer>
     </customers>
     <sales>
         <sale date="01/06/2020" customer="C1" product_id="P2">
             <list_products_sold Quantity="2">
-                <item>orange</item>
+                <item>laptop</item>
+                <item>pc</item>
             </list_products_sold>
-            <total_price></total_price>
-            <currency></currency>
+            <total_price>12500</total_price>
+            <currency>EUR</currency>
         </sale>
 
     </sales>
